@@ -1,0 +1,5 @@
+<p>text-editor works!</p>
+
+<div [hidden]="!isInitialized"  [froalaEditor]="editorOptions" (froalaInit)="initialize($event)" (froalaModelChange)="onContentChanged($event)">
+    <button [ngClass]="{'btn btn-warning':abc}">teststt</button>
+</div>

@@ -42,6 +42,22 @@ export class FirstComponent implements OnInit {
   ngOnInit() {
   }
 
+  public initControls;
+  public deleteAll;
+
+  public initialize(initControls) {
+    debugger
+    this.initControls = initControls;
+    this.deleteAll = function() {
+        this.initControls.getEditor().html.set();
+        this.initControls.getEditor().undo.reset();
+        this.initControls.getEditor().undo.saveStep();
+    };
+  }
+  public initializeLink = function(linkInitControls) {
+    this.linkInitControls = linkInitControls;
+   };
+
   public imgOptions: Object = {
     imageEditButtons: ['imageDisplay', 'imageAlign', 'imageInfo', 'imageRemove'],
     angularIgnoreAttrs: ['style', 'ng-reflect-froala-editor', 'ng-reflect-froala-model'],
@@ -195,7 +211,7 @@ export class FirstComponent implements OnInit {
     toolbarInline: true,
   };
 
-  public content: string = '<img  src="https://raw.githubusercontent.com/froala/wysiwyg-editor/master/editor.jpg" class="fr-fil" alt="book" width="150" />';
+  // public content: string = '<img  src="https://raw.githubusercontent.com/froala/wysiwyg-editor/master/editor.jpg" class="fr-fil" alt="book" width="150" />';
   public video: string = '<img  src="https://www.youtube.com/watch?v=mPhboJR0Llc" class="fr-fil" alt="video" width="150" />';
 
 
