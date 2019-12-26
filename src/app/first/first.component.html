@@ -1,7 +1,10 @@
 <p>first works!</p>
 
-<div id="sample2" [froalaEditor]="options" [(froalaModel)]="content">
+<div id="sample2" [froalaEditor]="options" [(froalaModel)]="content" (froalaInit)="initialize($event)">
+  <button class="manual" (click)="linkInitControls.initialize()">Initialize Editor</button>
+<button (click)="linkInitControls.destroy()" >Close Editor</button>
 </div>
+
 <!-- <div id="sample3" [froalaEditor]="videoOptions" [(froalaModel)]="video">
 </div> -->
 

@@ -9,7 +9,8 @@ import { FirstComponent } from './first/first.component';
 import 'froala-editor/js/plugins.pkgd.min.js';
 import 'froala-editor/js/plugins/image.min.js';
 import 'froala-editor/js/plugins/video.min.js';
-import './../assets/js/img.min.js'
+import './../assets/js/img.min.js';
+import { TextEditorComponent } from './text-editor/text-editor.component'
 // import './../assets/js/video.min.js'
 // import './../assets/css/font-awesome.min.css'
 // import './../assets/css/froala_style.min.css'
@@ -17,7 +18,8 @@ import './../assets/js/img.min.js'
 @NgModule({
   declarations: [
     AppComponent,
-    FirstComponent
+    FirstComponent,
+    TextEditorComponent
   ],
   imports: [
     FroalaEditorModule, FroalaViewModule,
